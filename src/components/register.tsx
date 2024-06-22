@@ -18,15 +18,16 @@ const Register: React.FC = () => {
         body: JSON.stringify({ username, password }),
       });
 
-      if (response.status === 201) {
+      if(response.status === 201){
         alert("Registration Successful");
         navigate('/login', { state: { username, password } }); // Redirect to /login with credentials
-      } else {
+      } 
+      else{
         throw new Error('Registration failed');
       }
-    } catch (error) {
+    } 
+    catch(error){
       console.error('Registration error:', error);
-      // Handle error (show error message, reset state, etc.)
     }
   };
 

@@ -8,7 +8,7 @@ interface NewOperationFormProps {
   showNewCalculationAlert: boolean;
   onSuccess: () => void;
   onError: (error: string) => void;
-  onCancel: () => void; // Added prop for handling cancel action
+  onCancel: () => void;
 }
 
 interface NewOperationFormRef {
@@ -19,7 +19,7 @@ const NewOperationForm = forwardRef<NewOperationFormRef, NewOperationFormProps>(
   const [operationType, setOperationType] = useState<string>('addition');
   const [operationValue, setOperationValue] = useState<string>('');
   const formRef = useRef<HTMLFormElement>(null);
-  const navigate = useNavigate(); // Initialize useNavigate hook
+  const navigate = useNavigate();
 
 
   useImperativeHandle(ref, () => ({

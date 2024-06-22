@@ -66,7 +66,7 @@ const MainComponent: React.FC = () => {
   };
 
   const handleCancelOperation = () => {
-    setShowOperation(false); // Update showOperation state to false
+    setShowOperation(false);
   };
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -88,11 +88,11 @@ const MainComponent: React.FC = () => {
         fetchData(); // Refresh data immediately after adding new calculation
       }
       else{
-        // alert("Please log in. Your session may have expired, or you might not be logged in.")
+        alert("Please log in. Your session may have expired, or you might not be logged in.")
         navigate('/login');
       }
     } catch (error) {
-      // alert("Please log in. Your session may have expired, or you might not be logged in.")
+      alert("Please log in. Your session may have expired, or you might not be logged in.")
       navigate('/login');
     }
   };

@@ -17,7 +17,7 @@ const Login: React.FC = () => {
   }, [location.state]);
 
   const handleLogin = async () => {
-    try {
+    try{
       const response = await fetch('https://calculationtreebackend-i779g6cp7-harsh-tyagis-projects-3fabd221.vercel.app/api/auth/login', {
         method: 'POST',
         headers: {
@@ -35,9 +35,9 @@ const Login: React.FC = () => {
         alert("Invalid/Unregistered username or password. Please register before login.");
       }
       
-    } catch (error) {
-      console.error('Login error:', error);
-      // Handle error (show error message, reset state, etc.)
+    } 
+    catch(error){
+      alert("Invalid/Unregistered username or password. Please register before login.");
     }
   };
 
