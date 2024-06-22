@@ -92,7 +92,7 @@ const MainComponent: React.FC = () => {
         navigate('/login');
       }
     } catch (error) {
-      alert("Please log in. Your session may have expired, or you might not be logged in.")
+      // alert("Please log in. Your session may have expired, or you might not be logged in.")
       navigate('/login');
     }
   };
