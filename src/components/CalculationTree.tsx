@@ -88,7 +88,7 @@ const MainComponent: React.FC = () => {
         fetchData(); // Refresh data immediately after adding new calculation
       }
       else{
-        alert("Please log in. Your session may have expired, or you might not be logged in.")
+        // alert("Please log in. Your session may have expired, or you might not be logged in.")
         navigate('/login');
       }
     } catch (error) {
